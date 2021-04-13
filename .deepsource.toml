@@ -1,0 +1,25 @@
+version = 1
+
+test_patterns = ["**/__tests__/**"]
+
+exclude_patterns = [
+  "other-packages/**",
+  "**/__fixtures__/**"
+]
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  environment = [ "nodejs", "browser" ]
+  plugins = ["react"]
+  dependency_file_paths = [
+    "core/docz-core/**",
+    "core/docz-rollup/**",
+    "core/docz-utils/**",
+    "core/docz/**",
+    "core/gatsby-theme-docz/**",
+    "core/rehype-docz/**",
+    "core/remark-docz/**",
+  ]
